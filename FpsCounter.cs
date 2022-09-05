@@ -24,7 +24,7 @@ public class FpsCounter : Label
         }
 
         var stringBuilder = new StringBuilder();
-        stringBuilder.Append(Terrain.ElapsedMs.HasValue ? $"Generated in {Terrain.ElapsedMs.Value}" : "Generating terrain...");
+        stringBuilder.Append(Terrain.ElapsedMs.HasValue ? $"Generated in {Terrain.ElapsedMs.Value}ms" : "Generating terrain...");
         stringBuilder.Append($"\nDebug render mode: {Enum.GetName(typeof(DebugDrawEnum), MeshGen.DebugMode)}");
         stringBuilder.Append($"\nFPS: {Engine.GetFramesPerSecond()}");
 
